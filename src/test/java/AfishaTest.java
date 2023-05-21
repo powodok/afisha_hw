@@ -37,7 +37,8 @@ public class AfishaTest {
 
     }
 
-    @Test // вывод фильмов в обратном порядке добавления в количестве меньше лимита когда добавленых фильмов меньше лимита (нижняя граница) (лимит по умолчанию)
+    @Test
+    // вывод фильмов в обратном порядке добавления в количестве меньше лимита когда добавленых фильмов меньше лимита (нижняя граница) (лимит по умолчанию)
     public void outputMovieLimitOnMin() {
 
         String[] expected = {};
@@ -47,7 +48,8 @@ public class AfishaTest {
 
     }
 
-    @Test // вывод фильмов в обратном порядке добавления в количестве меньше лимита когда добавленых фильмов меньше лимита (нижняя граница + 1) (лимит по умолчанию)
+    @Test
+    // вывод фильмов в обратном порядке добавления в количестве меньше лимита когда добавленых фильмов меньше лимита (нижняя граница + 1) (лимит по умолчанию)
     public void outputMovieLimitOnMin1() {
 
         afisha.add("Movie1");
@@ -59,7 +61,8 @@ public class AfishaTest {
 
     }
 
-    @Test // вывод фильмов в обратном порядке добавления в количестве меньше лимита когда добавленых фильмов меньше лимита (лимит по умолчанию)
+    @Test
+    // вывод фильмов в обратном порядке добавления в количестве меньше лимита когда добавленых фильмов меньше лимита (лимит по умолчанию)
     public void outputMovieLimitOn() {
 
         afisha.add("Movie1");
@@ -76,7 +79,8 @@ public class AfishaTest {
 
     }
 
-    @Test //  вывод фильмов в обратном порядке добавления в количестве меньше лимита когда добавленых фильмов меньше лимита (верхняя граница лимита - 1) (лимит по умолчанию)
+    @Test
+    //  вывод фильмов в обратном порядке добавления в количестве меньше лимита когда добавленых фильмов меньше лимита (верхняя граница лимита - 1) (лимит по умолчанию)
     public void outputMovieLimitOnMax0() {
 
         afisha.add("Movie1");
@@ -90,8 +94,6 @@ public class AfishaTest {
         afisha.add("Movie9");
 
 
-
-
         String[] expected = {"Movie9", "Movie8", "Movie7", "Movie6", "Movie5", "Movie4", "Movie3", "Movie2", "Movie1"};
         String[] actual = afisha.findLast();
 
@@ -99,7 +101,8 @@ public class AfishaTest {
 
     }
 
-    @Test // вывод фильмов в обратном порядке добавления в количестве меньше лимита когда добавленых фильмов равно лимиту (верхняя граница лимита) (лимит по умолчанию)
+    @Test
+    // вывод фильмов в обратном порядке добавления в количестве меньше лимита когда добавленых фильмов равно лимиту (верхняя граница лимита) (лимит по умолчанию)
     public void outputMovieLimitOnMax1() {
 
         afisha.add("Movie1");
@@ -114,14 +117,15 @@ public class AfishaTest {
         afisha.add("Movie10");
 
 
-        String[] expected = {"Movie10", "Movie9", "Movie8", "Movie7" ,"Movie6" ,"Movie5" ,"Movie4", "Movie3", "Movie2", "Movie1"};
+        String[] expected = {"Movie10", "Movie9", "Movie8", "Movie7", "Movie6", "Movie5", "Movie4", "Movie3", "Movie2", "Movie1"};
         String[] actual = afisha.findLast();
 
         Assertions.assertArrayEquals(expected, actual);
 
     }
 
-    @Test // вывод фильмов в обратном порядке добавления в количестве меньше лимита когда добавленых фильмов больше лимита (верхняя граница лимита +1) (лимит по умолчанию)
+    @Test
+    // вывод фильмов в обратном порядке добавления в количестве меньше лимита когда добавленых фильмов больше лимита (верхняя граница лимита +1) (лимит по умолчанию)
     public void outputMovieLimitOnMax2() {
 
         afisha.add("Movie1");
@@ -136,14 +140,15 @@ public class AfishaTest {
         afisha.add("Movie10");
         afisha.add("Movie11");
 
-        String[] expected = {"Movie11", "Movie10", "Movie9", "Movie8" ,"Movie7" ,"Movie6" ,"Movie5", "Movie4", "Movie3", "Movie2"};
+        String[] expected = {"Movie11", "Movie10", "Movie9", "Movie8", "Movie7", "Movie6", "Movie5", "Movie4", "Movie3", "Movie2"};
         String[] actual = afisha.findLast();
 
         Assertions.assertArrayEquals(expected, actual);
 
     }
 
-    @Test // вывод фильмов в обратном порядке добавления в количестве меньше лимита когда добавленых фильмов больше лимита (лимит по умолчанию)
+    @Test
+    // вывод фильмов в обратном порядке добавления в количестве меньше лимита когда добавленых фильмов больше лимита (лимит по умолчанию)
     public void outputMovieLimitOnMaxMax() {
 
         afisha.add("Movie1");
@@ -162,13 +167,14 @@ public class AfishaTest {
         afisha.add("Movie14");
         afisha.add("Movie15");
 
-        String[] expected = {"Movie15", "Movie14", "Movie13", "Movie12" ,"Movie11" ,"Movie10" ,"Movie9", "Movie8", "Movie7", "Movie6"};
+        String[] expected = {"Movie15", "Movie14", "Movie13", "Movie12", "Movie11", "Movie10", "Movie9", "Movie8", "Movie7", "Movie6"};
         String[] actual = afisha.findLast();
 
         Assertions.assertArrayEquals(expected, actual);
     }
 
-    @Test // вывод фильмов в обратном порядке добавления в количестве меньше лимита когда добавленых фильмов меньше лимита (нижняя граница) (лимит установлен)
+    @Test
+    // вывод фильмов в обратном порядке добавления в количестве меньше лимита когда добавленых фильмов меньше лимита (нижняя граница) (лимит установлен)
     public void outputMovieLimitOffMin() {
         Afisha afisha = new Afisha(5);
 
@@ -179,7 +185,8 @@ public class AfishaTest {
 
     }
 
-    @Test // вывод фильмов в обратном порядке добавления в количестве меньше лимита когда добавленых фильмов меньше лимита (нижняя граница + 1) (лимит установлен)
+    @Test
+    // вывод фильмов в обратном порядке добавления в количестве меньше лимита когда добавленых фильмов меньше лимита (нижняя граница + 1) (лимит установлен)
     public void outputMovieLimitOffMin1() {
         Afisha afisha = new Afisha(5);
 
@@ -192,7 +199,8 @@ public class AfishaTest {
 
     }
 
-    @Test // вывод фильмов в обратном порядке добавления в количестве меньше лимита когда добавленых фильмов меньше лимита (лимит установлен)
+    @Test
+    // вывод фильмов в обратном порядке добавления в количестве меньше лимита когда добавленых фильмов меньше лимита (лимит установлен)
     public void outputMovieLimitOff() {
         Afisha afisha = new Afisha(15);
 
@@ -210,7 +218,8 @@ public class AfishaTest {
 
     }
 
-    @Test //  вывод фильмов в обратном порядке добавления в количестве меньше лимита когда добавленых фильмов меньше лимита (верхняя граница лимита - 1) (лимит установлен)
+    @Test
+    //  вывод фильмов в обратном порядке добавления в количестве меньше лимита когда добавленых фильмов меньше лимита (верхняя граница лимита - 1) (лимит установлен)
     public void outputMovieLimitOffMax0() {
         Afisha afisha = new Afisha(5);
 
@@ -226,7 +235,8 @@ public class AfishaTest {
 
     }
 
-    @Test // вывод фильмов в обратном порядке добавления в количестве меньше лимита когда добавленых фильмов равно лимиту (верхняя граница лимита) (лимит установлен)
+    @Test
+    // вывод фильмов в обратном порядке добавления в количестве меньше лимита когда добавленых фильмов равно лимиту (верхняя граница лимита) (лимит установлен)
     public void outputMovieLimitOffMax1() {
         Afisha afisha = new Afisha(8);
 
@@ -240,15 +250,15 @@ public class AfishaTest {
         afisha.add("Movie8");
 
 
-
-        String[] expected = {"Movie8", "Movie7" ,"Movie6" ,"Movie5" ,"Movie4", "Movie3", "Movie2", "Movie1"};
+        String[] expected = {"Movie8", "Movie7", "Movie6", "Movie5", "Movie4", "Movie3", "Movie2", "Movie1"};
         String[] actual = afisha.findLast();
 
         Assertions.assertArrayEquals(expected, actual);
 
     }
 
-    @Test // вывод фильмов в обратном порядке добавления в количестве меньше лимита когда добавленых фильмов больше лимита (верхняя граница лимита +1) (лимит установлен)
+    @Test
+    // вывод фильмов в обратном порядке добавления в количестве меньше лимита когда добавленых фильмов больше лимита (верхняя граница лимита +1) (лимит установлен)
     public void outputMovieLimitOffMax2() {
         Afisha afisha = new Afisha(4);
 
@@ -266,7 +276,8 @@ public class AfishaTest {
 
     }
 
-    @Test // вывод фильмов в обратном порядке добавления в количестве меньше лимита когда добавленых фильмов больше лимита (лимит установлен)
+    @Test
+    // вывод фильмов в обратном порядке добавления в количестве меньше лимита когда добавленых фильмов больше лимита (лимит установлен)
     public void outputMovieLimitOffMaxMax() {
         Afisha afisha = new Afisha(6);
 
@@ -286,7 +297,7 @@ public class AfishaTest {
         afisha.add("Movie14");
         afisha.add("Movie15");
 
-        String[] expected = {"Movie15", "Movie14", "Movie13", "Movie12" ,"Movie11" ,"Movie10"};
+        String[] expected = {"Movie15", "Movie14", "Movie13", "Movie12", "Movie11", "Movie10"};
         String[] actual = afisha.findLast();
 
         Assertions.assertArrayEquals(expected, actual);
